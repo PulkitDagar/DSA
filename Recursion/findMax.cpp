@@ -28,6 +28,8 @@ int main(){
 
     cout<<"The maximum no will be"<<maxi<<endl;
 
+    return 0;
+
 
 
 }
