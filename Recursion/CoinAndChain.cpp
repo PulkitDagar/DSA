@@ -34,7 +34,7 @@ int main(){
     int target = 5;
 
     int ans = solve(arr,target);
-    cout<<"ans will be "<<ans<<endl;
+    cout<<" Our ans will be "<<ans<<endl;
 
 
     return 0;
