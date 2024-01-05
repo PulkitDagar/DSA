@@ -7,7 +7,18 @@ using namespace std;
 
 void lastOccLTR(string &s, char x, int i, int &ans){
 
-    
+    //base case
+    if(i>= s.size()){
+        return;
+    }
+
+    //ek case solve krdo baaki recurion sambhal lega
+    if(s[i]==x){
+        ans =i;
+    }
+
+    //RR
+    lastOccLTR(s,x,i+1,ans);
 }
 
 int main(){
