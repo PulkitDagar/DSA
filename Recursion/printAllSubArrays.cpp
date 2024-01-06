@@ -3,7 +3,19 @@
 using namespace std;
 
 void printSubarray_util(vector<int>&nums, int start, int end){
-    
+    //base case
+    if(end ==nums.size()){
+        return;
+    }
+
+    //ek case solve krdo
+    for(int i=start; i<=end; i++){
+        cout<<nums[i]<<" ";
+    }
+    cout<<endl;
+
+    //Recursive call
+    printSubarray_util(nums,start,end+1);
 }
 
 void printSubarray(vector<int>&nums){
