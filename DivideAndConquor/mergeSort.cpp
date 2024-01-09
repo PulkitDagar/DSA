@@ -8,7 +8,7 @@ void merge(int* arr, int start, int end){
     int len1 = mid-start+1;
     int len2 = end-mid;
 
-    //now we creae 2 arrays for lengthl1 and lengthl2
+    //now we creae 2 arrays for lengthl1 and length2 dynamically
     int* left = new int[len1];
     int* right = new int[len2];
 
