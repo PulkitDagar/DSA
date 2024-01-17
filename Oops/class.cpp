@@ -8,6 +8,8 @@ using namespace std;
 //syntax to create a class
 class Animal {
 
+    private:
+    int weight;
     public:
     //state or properties
     int age;
@@ -22,6 +24,14 @@ class Animal {
         
     };
 
+    int getWeight(){
+        return weight;
+    }
+
+    void setWeight(int w){
+        weight = w;
+    }
+
 
 };
 
@@ -35,6 +45,17 @@ int main(){
 
 
     Animal ramesh;
+    ramesh.age = 12;
     //cout<<"The age of ramesh is "<<ramesh.age<<endl; //it gives an error bcoz age is a private access modifier
     cout<<"The age of ramesh is"<<ramesh.age<<endl; //it works bcoz we marked public in class
+
+
+
+    //if we want to access a private member of a class so for that we use getter and setter function
+
+    //set the weight
+    ramesh.setWeight(101);
+    cout<<"the weight of ramesh is"<<ramesh.getWeight()<<endl;
+
+    
 }
