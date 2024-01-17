@@ -58,8 +58,11 @@ int main(){
     // cout<<"the weight of ramesh is"<<ramesh.getWeight()<<endl;
 
     
-  -----------------------------------------------------------------------------------------------------------
+  //   -----------------------------------------------------------------------------------------------------------
     //DYNAMIC MEMORY ALLOCATION
     
+    Animal* Suresh = new Animal;
+    Suresh->age = 15;
+    cout<<"the age of suresh of is"<<Suresh->age<<endl;
 
 };
