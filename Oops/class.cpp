@@ -28,8 +28,8 @@ class Animal {
         return weight;
     }
 
-    void setWeight(int w){
-        weight = w;
+    void setWeight(int weight){
+        (*this).weight = weight;
     }
 
 
@@ -63,6 +63,7 @@ int main(){
     
     Animal* Suresh = new Animal;
     Suresh->age = 15;
+
     cout<<"the age of suresh of is"<<Suresh->age<<endl;
 
 };
