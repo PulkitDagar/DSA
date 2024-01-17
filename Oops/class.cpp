@@ -8,6 +8,20 @@ using namespace std;
 //syntax to create a class
 class Animal {
 
+    //state or properties
+    int age;
+    string name;
+
+    //function or behaviour
+    void eat(){
+
+    };
+
+    void sleep(){
+        
+    };
+
+
 };
 
 int main(){
