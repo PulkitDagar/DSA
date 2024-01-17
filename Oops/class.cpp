@@ -4,6 +4,8 @@
 #include<iostream>
 using namespace std;
 
+
+//syntax to create a class
 class Animal {
 
 };
