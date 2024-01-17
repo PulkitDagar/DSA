@@ -44,18 +44,22 @@ int main(){
     //static memory allocation
 
 
-    Animal ramesh;
-    ramesh.age = 12;
+    // Animal ramesh;
+    // ramesh.age = 12;
     //cout<<"The age of ramesh is "<<ramesh.age<<endl; //it gives an error bcoz age is a private access modifier
-    cout<<"The age of ramesh is"<<ramesh.age<<endl; //it works bcoz we marked public in class
+    // cout<<"The age of ramesh is"<<ramesh.age<<endl; //it works bcoz we marked public in class
 
 
 
     //if we want to access a private member of a class so for that we use getter and setter function
 
     //set the weight
-    ramesh.setWeight(101);
-    cout<<"the weight of ramesh is"<<ramesh.getWeight()<<endl;
+    // ramesh.setWeight(101);
+    // cout<<"the weight of ramesh is"<<ramesh.getWeight()<<endl;
 
     
-}
+  -----------------------------------------------------------------------------------------------------------
+    //DYNAMIC MEMORY ALLOCATION
+    
+
+};
