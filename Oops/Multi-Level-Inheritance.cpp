@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+//to understand multi-level inheritance the best example is we have a parent and child inherit from it then
+//the grand-child inherit from both of them
+
 class Fruit{
     public:
     string name;
