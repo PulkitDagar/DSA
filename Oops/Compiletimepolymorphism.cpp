@@ -3,6 +3,7 @@ using namespace std;
 
 
 ///we make a many form of a single function
+//function overloading
 class Maths{
 
     public:
