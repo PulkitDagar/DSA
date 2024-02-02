@@ -2,6 +2,34 @@
 #include<vector>
 using namespace std;
 
+bool isSafe(int row, int col, vector<vector<int>>&board, int n){
+    //check krna chahte hai ki kya mai current 
+    //cell[row,col] pr queen rakh sakta hu ya nahi
+
+    int i = row;
+    int j = col;
+
+    //check row
+    while(j>=0){
+        if(board[i][j] ==1){
+            return false;
+        }
+        j--;
+    }
+
+    //check upper left digonal
+    i = row;
+    j = col;
+
+    while(i>= 0 && j>=0){
+        if(board[i][j] == 1){
+            return false;
+        }
+        i--;
+        j--;
+    }
+}
+
 void solve(vector<vector<int>> &board, int col, int n){
     //base case
 
