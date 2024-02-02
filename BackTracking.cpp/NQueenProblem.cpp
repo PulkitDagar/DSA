@@ -2,7 +2,16 @@
 #include<vector>
 using namespace std;
 
+void solve(vector<vector<int>> &board, int col, int n){
+    //base case
 
+    if(col>=n){
+        printSolution(board,n);
+        return;
+    }
+
+    
+}
 
 
 int main(){
