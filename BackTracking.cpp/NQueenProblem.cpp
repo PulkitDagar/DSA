@@ -10,8 +10,22 @@ void solve(vector<vector<int>> &board, int col, int n){
         return;
     }
 
-    
-}
+    //1 case solve krdo baaki recursion sambhal lega
+    for(int row = 0; row<n; row++){
+        if(isSafe(row,col,board,n)){
+
+            //rakh do
+            board[row][col] = 1;
+
+            ///recursion solution laega
+            solve(board, col+1, n);
+
+            //backtracking
+            board[row][col] = 0;
+        }
+    }
+
+};
 
 
 int main(){
