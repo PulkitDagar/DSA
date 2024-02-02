@@ -28,6 +28,21 @@ bool isSafe(int row, int col, vector<vector<int>>&board, int n){
         i--;
         j--;
     }
+
+    //check bottom left diagonal
+    i = row;
+    j = col;
+
+    while(i<n && j>=0){
+        if(board[i][j] == 1){
+            return false;
+        }
+        i++;
+        j--;
+    }
+
+    ///kahin pr bhi queen nahi mili iska matlab ye position safe hai iska mtlb return true krdo
+    return true;
 }
 
 void solve(vector<vector<int>> &board, int col, int n){
