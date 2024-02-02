@@ -2,6 +2,10 @@
 #include<vector>
 using namespace std;
 
+void printSolution(vector<vector<int>> &board, int n){
+    
+}
+
 bool isSafe(int row, int col, vector<vector<int>>&board, int n){
     //check krna chahte hai ki kya mai current 
     //cell[row,col] pr queen rakh sakta hu ya nahi
