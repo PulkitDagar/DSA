@@ -3,7 +3,12 @@
 using namespace std;
 
 void printSolution(vector<vector<int>> &board, int n){
-    
+    for(int i=0; i<n; i++){
+        for(int j = 0; j<n; j++){
+            cout<<board[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
 
 bool isSafe(int row, int col, vector<vector<int>>&board, int n){
