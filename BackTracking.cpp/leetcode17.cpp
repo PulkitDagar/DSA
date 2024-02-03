@@ -8,7 +8,7 @@ public:
         }
 
         ///ek case solve krdo
-        int digit = digits[index] - '0';
+        int digit = digits[index] - '0';  //we converted character into interger
         string value = mapping[digit];
         for(int i=0; i<value.length(); i++){
             char ch = value[i];
