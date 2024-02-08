@@ -23,7 +23,12 @@ class Node {
 
 int main(){
     
-    Node* head = new Node();
+    Node* first = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
+    Node* fourth = new Node();
+    Node* fifth = new Node();
+    
 
 
     return 0;
