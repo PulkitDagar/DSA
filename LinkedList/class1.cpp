@@ -28,7 +28,14 @@ int main(){
     Node* third = new Node();
     Node* fourth = new Node();
     Node* fifth = new Node();
-    
+
+
+    ///now we connect nodes to each other
+    first->next = second;
+    second->next = third;
+    third->next = fourth;
+    fourth->next = fifth;
+    fifth->next = NULL;
 
 
     return 0;
