@@ -18,6 +18,30 @@ class Node {
 
 };
 
+
+
+///SECOND WAY OF INSERTION ----------------------------------------------
+// void insertATHead(Node* &head, Node* &tail, int data){
+
+//     ///check for linked list is empty or not
+//     if(head == NULL){
+//       Node* newNode = new Node(data);
+//       head = newNode;
+//       tail = newNode;
+//       return;
+//     }
+
+//     ///now write all threee cases
+//     // step1:
+//     Node* newNode = new Node(data);
+
+//     //step2:
+//     newNode->next = head;
+
+//     //step 3:
+//     head = newNode;
+// }
+
 ///insertion of an element at the head(starting)
 void insertATHead(Node* &head, Node* &tail, int data){
 
@@ -34,6 +58,29 @@ void insertATHead(Node* &head, Node* &tail, int data){
   }
   head = newNode;
 };
+
+
+///SECOND WAY OF INSERTION ----------------------------------------------
+// void insertAtTail(Node* &head, Node* &tail, int data){
+
+//   ///check if linked list is empty or not
+//   if(head == NULL){
+//     Node* newNode = new Node(data);
+//     head = newNode;
+//     tail = newNode;
+
+//     return;
+//   }
+
+//   //step 1: create a new node
+//   Node* newNode = new Node(data);
+
+//   //step 2: connect with new node
+//   tail->next = newNode;
+
+//   // step 3 
+//   tail = newNode;
+// }
 
 
 ///insertion of an element at the tail(end)
