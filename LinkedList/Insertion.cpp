@@ -45,13 +45,15 @@ void insertAtTail(Node* &head, Node* &tail, int data){
   //step 2: connect with new node
   if(tail == NULL){
     tail = newNode;
-  }
-  tail->next = newNode;
-
-  ///step 3: tail ko ending me lga do
-  if(head == NULL){
     head = newNode;
   }
+  else{
+  tail->next = newNode;
+
+  }
+
+  ///step 3: tail ko ending me lga do
+ 
   tail = newNode;
 };
 
@@ -78,7 +80,7 @@ int main() {
   // insertATHead(head,tail,90);
 
   insertAtTail(head,tail,5);
-  insertAtTail(head,tail,4);
+  insertAtTail(head,tail,40);
   
 
   print(head);
