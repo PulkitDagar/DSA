@@ -92,7 +92,7 @@ void insertAtPosition(Node* &head, Node* &tail, int data, int position){
   }
 
   int len = getLength(head);
-  if(position>=len){
+  if(position>len){
     insertionAtTail(head,tail,data);
     return;
   }
