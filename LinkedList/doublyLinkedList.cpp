@@ -76,6 +76,49 @@ void insertionAtTail(Node* &head, Node* &tail, int data){
   tail = newNode;
 }
 
+void insertAtPosition(Node* &head, Node* &tail, int data, int position){
+    //step1: check linked list is empty or not
+  if(head==NULL){
+    Node* newNode = new Node(data);
+    head = newNode;
+    tail = newNode;
+
+    return;
+  };
+  //LL is not empty
+  if(position==1){
+    insertionAtHead(head,tail,data);
+    return;
+  }
+
+  int len = getLength(head);
+  if(position>=len){
+    insertionAtTail(head,tail,data);
+    return;
+  }
+
+  
+  // find prev and curr position;
+  int i =1;
+  Node* prevNode = head;
+
+  while(i<position-1){
+    prevNode = prevNode->next;
+    i++;
+  }
+  Node* curr = prevNode->next;
+
+  //create a new Node
+  Node* newNode = new Node(data);
+
+  prevNode->next = newNode;
+  newNode->prev = prevNode;
+  curr->prev = newNode;
+  newNode->next = curr;
+
+  
+}
+
 
 void print(Node* &head){
   Node* temp = head;
@@ -111,6 +154,11 @@ int main() {
    cout<<endl;
 
    insertionAtTail(head,tail,103);
+   print(head);
+
+    cout<<endl;
+
+   insertAtPosition(head,tail,500,4);
    print(head);
 
   
