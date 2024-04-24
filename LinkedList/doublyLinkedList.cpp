@@ -60,6 +60,22 @@ void insertionAtHead(Node* &head, Node* &tail, int data){
   head = newNode;
 };
 
+void insertionAtTail(Node* &head, Node* &tail, int data){
+   //step1: check linked list is empty or not
+  if(head==NULL){
+    Node* newNode = new Node(data);
+    head = newNode;
+    tail = newNode;
+
+    return;
+  };
+  //LL is not empty
+  Node* newNode = new Node(data);
+  tail->next = newNode;
+  newNode->prev = tail;
+  tail = newNode;
+}
+
 
 void print(Node* &head){
   Node* temp = head;
@@ -90,6 +106,11 @@ int main() {
   cout<<endl;
 
    insertionAtHead(head,tail,101);
+   print(head);
+
+   cout<<endl;
+
+   insertionAtTail(head,tail,103);
    print(head);
 
   
