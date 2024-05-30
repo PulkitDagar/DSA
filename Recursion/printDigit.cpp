@@ -14,6 +14,24 @@ void printDigit(int n){
     cout<<digit<<" ";
 
 }
+
+// void printDigits(int num){
+//     //base case
+//     if(num==0){
+//         return;
+//     }
+
+//     int digit = num%10;
+//     //update num
+//     num = num/10;
+//     //recursive call
+//     printDigits(num);
+
+//     //processing
+//     cout<<digit<<endl;
+// }
+
+
 int main(){
     int n = 647;
 
