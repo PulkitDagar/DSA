@@ -129,6 +129,72 @@ void print(Node* &head){
 }
 
 
+void deleteFromPosition(Node* &head, Node* &tail, int position){
+  if(head == NULL){
+    cout<<"Empty linked list";
+    return;
+  }
+  if(head->next ==NULL){
+    //single node
+    Node* temp = head;
+    head = NULL;
+    tail = NULL;
+    delete temp;
+    return;
+  }
+  
+  int len = getLength(head);
+  if(position > len ){
+    cout<<"Please enter the valid length";
+    return;
+  }
+
+  if(position == 1){
+    //want to delete the first node
+    Node* temp = head;
+    head = head->next;
+    head->prev = NULL;
+    temp->next = NULL;
+    delete temp;
+    return;
+  }
+
+  
+  if(position ==len){
+    
+    //delete last node
+    Node* temp = tail;
+    tail = tail->prev;
+    temp->prev = NULL;
+    tail->next = NULL;
+    delete temp;
+    return;
+
+  }
+
+  ///delete from middle of linked list
+  //step1: find left, curr and right
+  int i = 1;
+  Node* left = head;
+  while(i<position-1){
+    left = left->next;
+    i++;
+  }
+
+  Node* curr = left->next;
+  Node* right = curr->next;
+
+  //step2:
+  left->next = right;
+  // step3
+  right->prev = left;
+
+  curr->next = NULL;
+  curr->prev = NULL;
+  delete curr;
+}
+
+
 
 int main() {
 
