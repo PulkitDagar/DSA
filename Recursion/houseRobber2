@@ -1,0 +1,32 @@
+///house robber2
+class solution{
+  public:
+  int solve(vector<int>& nums, int s, int e){
+    //base case
+    if(s>e){
+      return 0;
+    }
+
+    ///chori krlo ith index per
+    int option1 = nums[s] + solve(nums,s+2,e);
+
+    //chori mt kro ith index per
+    int option2 = 0 + solve(nums,s+1,e);
+
+    //find max of option 1 and 2
+    int finalAns = max(option1, option2);
+    return finalAns;
+  }
+
+  int rob(vector<int>& nums){
+    int n = nums.size();
+    //single element
+    if(n==1){
+      return nums[0];
+    }
+    int option1 = solve(nums,1,n-2);
+    int option2  = solve( nums, 1,n-1);
+    int ans = max(option1,option2);
+    return ans;
+  }
+}
