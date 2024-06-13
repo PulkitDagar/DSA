@@ -17,6 +17,11 @@ class Node{
     this->next = NULL;
   };
 
+  //destructor for deletion
+  ~Node(){
+    cout<<"Destructor called for: "<<this->data<<" ";
+  }
+
 };
 
 
@@ -126,6 +131,61 @@ void insertionAtPosition(Node* &head, Node* &tail, int data, int position){
   ///step 5: prev node ka next h usne newNode k braber krdo
   prev->next = newNode;
 
+}
+
+void deleteNode(Node* &head, Node* &tail, int position){
+  //empty linked list
+  if(head==NULL){
+    cout<<"Cannot delete bcoz linked list is empty"<<endl;
+  };
+
+  int len = findLength(head);
+  //delete from head
+  if(position == 1){
+    //first node ko delete krdo
+    Node* temp = head;
+    head = temp->next;
+    temp->next = NULL;
+    delete temp;   //whenever we free the dynamically allocated memory the destructor get called
+
+  }
+
+  else if(position==len){
+    ///last node ko delete krdo
+    Node* prev = head;
+    while(prev-> next !=tail){
+      prev = prev->next;
+    }
+
+    //prev node ka link null kro
+    prev->next = NULL;
+
+    //node delete kro
+    delete tail;
+
+    //tail ko update kro
+    tail = prev;
+  }
+  else{
+    //middle se delete krdo
+
+    //set prev and current pointers
+    int i = 1;
+    Node* prev = head;
+    while(i<position-1){
+      prev = prev->next;
+      i++;
+    }
+    Node* curr = prev->next;
+
+    //step2: prev k next ko curr k next k braber krdo
+    prev->next = curr->next;
+    //step3:
+    curr->next = NULL;
+
+    //4:
+    delete curr;
+  }
 }
 
 
