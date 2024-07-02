@@ -57,7 +57,7 @@ class Stack{
    
   };
 
-  ///generally hota nhi hai but void function 
+  ///generally hota nhi hai  void function 
   void print(){
     cout<<endl;
     cout<<"top1"<<top1<<endl;
