@@ -63,7 +63,12 @@ class Queue{
   }
 
   int getSize(){
-    return back-front + 1;
+    if(front == -1 && back == -1){
+      return 0;
+    } else{
+      return back-front + 1;
+
+    }
   }
 
   int getFront(){
