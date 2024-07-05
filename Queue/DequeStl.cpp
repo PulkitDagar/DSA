@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+///circular case included
 
 class Deque{
   public:
