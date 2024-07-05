@@ -3,24 +3,6 @@
 #include<queue>
 using namespace std;
 
-void reverseQueue(queue<int> &q){
-  //create a stack
-  stack<int> st;
-  while(!q.empty()){
-    int frontElement = q.front();
-    q.pop();
-
-    st.push(frontElement);
-  };
-
-  //one by one queue mai push krdo
-  while(!st.empty()){
-    int element = st.top();
-    st.pop();
-
-    q.push(element);
-  }
-}
 
 void reverseFirstK(queue<int>& q, int k){
   //push first k elements into stack
