@@ -68,7 +68,7 @@ void levelOrderTraversal(Node *root)
     q.push(NULL);
 
     // traversal shuru krte hai
-    while (q.size() > 1)
+    while (!q.empty())
     {
         Node *front = q.front();
         q.pop();
@@ -76,7 +76,9 @@ void levelOrderTraversal(Node *root)
         if (front == NULL)
         {
             cout << endl;
-            q.push(NULL);
+            if(!q.empty()){
+                q.push(NULL);
+            }
         }
         else
         {
