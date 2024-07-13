@@ -36,6 +36,44 @@ Node* createTree(){
   return root;
 }
 
+///second way to create Tree from level order traversal
+// Node* createTreeLevelOrder() {
+//     int data;
+//     cout << "Enter the root value (-1 for NULL): ";
+//     cin >> data;
+
+//     if (data == -1) {
+//         return NULL;
+//     }
+
+//     Node* root = new Node(data);
+//     queue<Node*> q;
+//     q.push(root);
+
+//     while (!q.empty()) {
+//         Node* current = q.front();
+//         q.pop();
+
+//         // Left child
+//         cout << "Enter the left child of " << current->data << " (-1 for NULL): ";
+//         cin >> data;
+//         if (data != -1) {
+//             current->left = new Node(data);
+//             q.push(current->left);
+//         }
+
+//         // Right child
+//         cout << "Enter the right child of " << current->data << " (-1 for NULL): ";
+//         cin >> data;
+//         if (data != -1) {
+//             current->right = new Node(data);
+//             q.push(current->right);
+//         }
+//     }
+
+//     return root;
+// }
+
 
 
 int main() {
