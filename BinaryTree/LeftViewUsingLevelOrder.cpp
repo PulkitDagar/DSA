@@ -114,3 +114,35 @@ int main() {
 //     }
 //     cout << endl;
 // }
+
+
+//left view using recursion
+// void printLeftTree(Node* root,vector<int> &ans, int level){
+//     //base case
+//     if(root==NULL){
+//         return;
+//     }
+
+//     if(level==ans.size()){
+//         ans.push_back(root->data);
+//     };
+
+//     //left side
+//     printLeftTree(root->left,ans,level+1);
+
+//     //right
+//     printLeftTree(root->right, ans, level+1);
+// };
+
+// int main(){
+//     Node* root = createTree();
+//     vector<int> ans;
+//     int level = 0;
+//     printLeftTree(root,ans,level);
+
+        // for(auto i:ans){
+        //     cout<<i<<" ";
+        // }
+
+//     return 0;
+// }
