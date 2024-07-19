@@ -61,8 +61,8 @@ void printBottomView(Node* root){
 
     
     
-      //create entry
-      topNode[hd] = frontNode->data;
+    //create entry
+    topNode[hd] = frontNode->data;
 
     if(frontNode->left){
       //ager left exist krta hai

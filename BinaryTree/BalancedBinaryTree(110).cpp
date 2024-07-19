@@ -36,6 +36,7 @@ public:
 };
 
 
+//rule: leftHeight - rightHeight <=1;
 // approach 2
 // class Solution {
 // public:
