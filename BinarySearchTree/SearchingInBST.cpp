@@ -67,5 +67,7 @@ int main() {
 
     // You can add additional code here to traverse the tree and check its structure.
 
+    //add traversal here any method inorder preorder postorder levelorder
+
     return 0;
 }
