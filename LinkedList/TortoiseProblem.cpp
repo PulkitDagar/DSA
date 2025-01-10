@@ -25,6 +25,51 @@ Node* getMiddle(Node* &head){
     return head;
   }
 
+  //Odd-length list: The slow pointer points to the exact middle node.
+  // Even-length list: The slow pointer points to the second middle node.
+  ////example no 2 to keep in mind
+
+  // ListNode* findMiddle(ListNode* head) {
+  //   ListNode* slow = head;
+  //   ListNode* fast = head;
+
+  //   // Move until fast reaches the end
+  //   while (fast != nullptr && fast->next != nullptr) {
+  //       slow = slow->next;       // Move slow by 1 step
+  //       fast = fast->next->next; // Move fast by 2 steps
+  //   }
+
+  //   // Slow is now pointing to the middle node
+  //   return slow;
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   Node* slow = head;
   Node* fast = head;   //Node* fast = head->next in case you need exact middle one in even case
   //linked have more than 1 element
